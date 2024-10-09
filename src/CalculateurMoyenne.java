@@ -34,25 +34,25 @@ public class CalculateurMoyenne {
 	    int MoyeneEleve = 0;
 	    int MoyeneClasse = 0;
 	    int nbNotesClasse = 0;
-	    
+
 	    for (int i = 0; i < intElevesNotes.length; ++i) {
 	    	MoyeneEleve = 0;
 	    	System.out.print("La moyene des notes pour l'éléve " + i);
-		    for (int j= 0; j < intElevesNotes[i].length; ++j) {
-		    	MoyeneEleve += intElevesNotes[i][j];
-		    	MoyeneClasse += intElevesNotes[i][j];
-		    	nbNotesClasse += 1;
-		    }
-		    MoyeneEleve /= intElevesNotes[i].length;
-		    System.out.println(" est " + MoyeneEleve);
-	     }
-	    
+	    	for (int j= 0; j < intElevesNotes[i].length; ++j) {
+	    		MoyeneEleve += intElevesNotes[i][j];
+	    		MoyeneClasse += intElevesNotes[i][j];
+	    		nbNotesClasse += 1;
+	    	}
+	    	MoyeneEleve /= intElevesNotes[i].length;
+	    	System.out.println(" est " + MoyeneEleve);
+	    }
+
 	    System.out.println("Total notes classe " + MoyeneClasse);
 	    System.out.println("Nombres notes classe " + nbNotesClasse);
 	    MoyeneClasse /= nbNotesClasse;
 	    System.out.println("La moyene des notes pour la classe est " + MoyeneClasse);
-	    
-		myObj.close();
+
+	    myObj.close();
 		
 		
 	}
